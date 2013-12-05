@@ -1,0 +1,9 @@
+var WebSocket = require('ws');
+var server = require('./setup'); // load server
+
+var port = process.env.PORT || 9080;
+var socket = new WebSocket('ws://localhost:'+port+'/test');
+
+// in this scenario we are the browser
+// we have an open websocket connection to a socket server
+// on 'open', send it 'Hello!' and log what it sends back
